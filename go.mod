@@ -1,4 +1,4 @@
-module Canvas
+module github.com/LaminoidStudio/Canvas
 
 go 1.20
 
