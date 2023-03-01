@@ -1,4 +1,4 @@
-module github.com/tdewolff/canvas
+module github.com/LaminoidStudio/Canvas
 
 go 1.17
 
@@ -14,8 +14,6 @@ require (
 	github.com/go-fonts/latin-modern v0.2.0
 	github.com/go-fonts/liberation v0.2.0
 	github.com/go-fonts/stix v0.1.0
-	github.com/go-gl/gl v0.0.0-20211210172815-726fda9656d6
-	github.com/go-gl/glfw/v3.3/glfw v0.0.0-20220622232848-a6c407ee30a0
 	github.com/go-latex/latex v0.0.0-20210823091927-c0d11ff05a81
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0
 	github.com/paulmach/orb v0.7.1
