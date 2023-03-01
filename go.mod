@@ -1,5 +1,7 @@
 module github.com/LaminoidStudio/Canvas
 
+replace github.com/tdewolff/canvas => github.com/LaminoidStudio/Canvas
+
 go 1.17
 
 require (
