@@ -8,6 +8,7 @@ require (
 	github.com/benoitkugler/textlayout v0.3.0
 	github.com/benoitkugler/textprocessing v0.0.2
 	github.com/dsnet/compress v0.0.1
+	github.com/go-fonts/latin-modern v0.2.0
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0
 	github.com/tdewolff/argp v0.0.0-20221007181215-ebef9ed8a560
 	github.com/tdewolff/minify v2.3.6+incompatible
@@ -18,6 +19,7 @@ require (
 	golang.org/x/image v0.5.0
 	golang.org/x/text v0.7.0
 	gonum.org/v1/plot v0.12.0
+	star-tex.org/x/tex v0.4.0
 )
 
 require (

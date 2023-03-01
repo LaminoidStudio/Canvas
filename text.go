@@ -461,6 +461,16 @@ func (rt *RichText) AddImage(img image.Image, res Resolution, valign VerticalAli
 	return rt
 }
 
+// AddLaTeX adds a LaTeX formula.
+func (rt *RichText) AddLaTeX(s string) error {
+	p, err := ParseLaTeX(s)
+	if err != nil {
+		return err
+	}
+	rt.AddPath(p, Black, Baseline)
+	return nil
+}
+
 func scriptDirection(mode WritingMode, orient TextOrientation, script canvasText.Script, direction canvasText.Direction) (canvasText.Direction, canvasText.Rotation) {
 	if direction == canvasText.TopToBottom || direction == canvasText.BottomToTop {
 		if mode == HorizontalTB {
