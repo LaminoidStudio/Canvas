@@ -4,8 +4,8 @@ import (
 	"image/color"
 	"math"
 
-	"github.com/tdewolff/canvas"
-	"github.com/tdewolff/canvas/renderers"
+	"github.com/LaminoidStudio/Canvas"
+	"github.com/LaminoidStudio/Canvas/renderers"
 )
 
 var fontFamily *canvas.FontFamily

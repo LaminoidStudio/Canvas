@@ -7,9 +7,9 @@ import (
 	"math"
 	"reflect"
 
+	"github.com/LaminoidStudio/Canvas/font"
+	"github.com/LaminoidStudio/Canvas/text"
 	"github.com/adrg/sysfont"
-	"github.com/tdewolff/canvas/font"
-	"github.com/tdewolff/canvas/text"
 )
 
 // FontStyle defines the font style to be used for the font. It specifies a boldness with optionally italic, e.g. FontBlack | FontItalic will specify a black boldness (a font-weight of 800 in CSS) and italic.

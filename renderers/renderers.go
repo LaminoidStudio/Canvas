@@ -9,13 +9,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	//webp "github.com/kolesa-team/go-webp/encoder"
-	"github.com/tdewolff/canvas"
-	"github.com/tdewolff/canvas/renderers/pdf"
-	"github.com/tdewolff/canvas/renderers/ps"
-	"github.com/tdewolff/canvas/renderers/rasterizer"
-	"github.com/tdewolff/canvas/renderers/svg"
-	"github.com/tdewolff/canvas/renderers/tex"
+	"github.com/LaminoidStudio/Canvas"
+	"github.com/LaminoidStudio/Canvas/renderers/pdf"
+	"github.com/LaminoidStudio/Canvas/renderers/ps"
+	"github.com/LaminoidStudio/Canvas/renderers/rasterizer"
+	"github.com/LaminoidStudio/Canvas/renderers/svg"
 	"golang.org/x/image/bmp"
 	"golang.org/x/image/tiff"
 )
@@ -36,16 +34,12 @@ func Write(filename string, c *canvas.Canvas, opts ...interface{}) error {
 		return c.WriteFile(filename, TIFF(opts...))
 	case ".bmp":
 		return c.WriteFile(filename, BMP(opts...))
-	//case ".webp":
-	//	return c.WriteFile(filename, WEBP(opts...))
 	case ".svgz":
 		return c.WriteFile(filename, SVGZ(opts...))
 	case ".svg":
 		return c.WriteFile(filename, SVG(opts...))
 	case ".pdf":
 		return c.WriteFile(filename, PDF(opts...))
-	case ".tex", ".pgf":
-		return c.WriteFile(filename, TeX(opts...))
 	case ".ps":
 		return c.WriteFile(filename, PS(opts...))
 	case ".eps":
@@ -247,17 +241,6 @@ func PDF(opts ...interface{}) canvas.Writer {
 		pdf := pdf.New(w, c.W, c.H, options)
 		c.RenderTo(pdf)
 		return pdf.Close()
-	}
-}
-
-func TeX(opts ...interface{}) canvas.Writer {
-	for _, opt := range opts {
-		return errorWriter(fmt.Errorf("unknown option: %v", opt))
-	}
-	return func(w io.Writer, c *canvas.Canvas) error {
-		tex := tex.New(w, c.W, c.H)
-		c.RenderTo(tex)
-		return tex.Close()
 	}
 }
 

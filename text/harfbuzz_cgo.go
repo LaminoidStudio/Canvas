@@ -1,3 +1,4 @@
+//go:build harfbuzz && !js
 // +build harfbuzz,!js
 
 package text
@@ -22,7 +23,7 @@ import (
 	"unicode/utf8"
 	"unsafe"
 
-	"github.com/tdewolff/canvas/font"
+	"github.com/LaminoidStudio/Canvas/font"
 )
 
 // Design inspired by https://github.com/npillmayer/tyse/blob/main/engine/text/textshaping/

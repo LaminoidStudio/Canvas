@@ -3,7 +3,7 @@ package text
 import (
 	"fmt"
 
-	"github.com/tdewolff/canvas/font"
+	"github.com/LaminoidStudio/Canvas/font"
 )
 
 // Glyph is a shaped glyph for the given font and font size. It specified the glyph ID, the cluster ID, its X and Y advance and offset in font units, and its representation as text.

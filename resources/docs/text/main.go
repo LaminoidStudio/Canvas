@@ -5,8 +5,8 @@ import (
 	"image/png"
 	"os"
 
-	"github.com/tdewolff/canvas"
-	"github.com/tdewolff/canvas/renderers"
+	"github.com/LaminoidStudio/Canvas"
+	"github.com/LaminoidStudio/Canvas/renderers"
 )
 
 var fontFamily, fontLatin, fontArabic, fontDevanagari, fontMongolian, fontCJK *canvas.FontFamily
@@ -95,11 +95,7 @@ func main() {
 	rt.AddPath(p, canvas.Green, canvas.Baseline)
 	rt.WriteString(" and ")
 	rt.AddImage(img, canvas.DPMM(200.0), canvas.Baseline)
-	rt.WriteString(" refer to foo when ")
-	if err := rt.AddLaTeX("x = \\frac{5}{2}"); err != nil {
-		panic(err)
-	}
-	rt.WriteString(".")
+	rt.WriteString(" refer to foo when x = 5/2.")
 	ctx.DrawText(40.0, 7.0, rt.ToText(00.0, 00.0, canvas.Center, canvas.Top, 0.0, 0.0))
 
 	renderers.Write("obj.png", c, canvas.DPMM(5.0))

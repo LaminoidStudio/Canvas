@@ -14,8 +14,8 @@ import (
 	"math"
 	"strings"
 
-	"github.com/tdewolff/canvas"
-	canvasFont "github.com/tdewolff/canvas/font"
+	"github.com/LaminoidStudio/Canvas"
+	canvasFont "github.com/LaminoidStudio/Canvas/font"
 )
 
 type Options struct {

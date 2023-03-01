@@ -14,9 +14,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tdewolff/canvas"
-	canvasFont "github.com/tdewolff/canvas/font"
-	canvasText "github.com/tdewolff/canvas/text"
+	"github.com/LaminoidStudio/Canvas"
+	canvasFont "github.com/LaminoidStudio/Canvas/font"
+	canvasText "github.com/LaminoidStudio/Canvas/text"
 )
 
 // TODO: Invalid graphics transparency, Group has a transparency S entry or the S entry is null

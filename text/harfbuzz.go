@@ -7,10 +7,10 @@ import (
 	"bytes"
 	"unicode/utf8"
 
+	"github.com/LaminoidStudio/Canvas/font"
 	"github.com/benoitkugler/textlayout/fonts/truetype"
 	"github.com/benoitkugler/textlayout/harfbuzz"
 	"github.com/benoitkugler/textlayout/language"
-	"github.com/tdewolff/canvas/font"
 )
 
 // Shaper is a text shaper formatting a string in properly positioned glyphs.

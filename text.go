@@ -10,7 +10,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	canvasText "github.com/tdewolff/canvas/text"
+	canvasText "github.com/LaminoidStudio/Canvas/text"
 )
 
 // TextAlign specifies how the text should align or whether it should be justified.
@@ -459,16 +459,6 @@ func (rt *RichText) AddImage(img image.Image, res Resolution, valign VerticalAli
 	c.RenderImage(img, Identity.Scale(1.0/res.DPMM(), 1.0/res.DPMM()))
 	rt.AddCanvas(c, valign)
 	return rt
-}
-
-// AddLaTeX adds a LaTeX formula.
-func (rt *RichText) AddLaTeX(s string) error {
-	p, err := ParseLaTeX(s)
-	if err != nil {
-		return err
-	}
-	rt.AddPath(p, Black, Baseline)
-	return nil
 }
 
 func scriptDirection(mode WritingMode, orient TextOrientation, script canvasText.Script, direction canvasText.Direction) (canvasText.Direction, canvasText.Rotation) {

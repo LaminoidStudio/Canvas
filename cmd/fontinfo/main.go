@@ -13,9 +13,9 @@ import (
 	"path/filepath"
 	"unicode"
 
+	"github.com/LaminoidStudio/Canvas"
+	"github.com/LaminoidStudio/Canvas/font"
 	"github.com/tdewolff/argp"
-	"github.com/tdewolff/canvas"
-	"github.com/tdewolff/canvas/font"
 	"golang.org/x/image/draw"
 	"golang.org/x/image/tiff"
 	"golang.org/x/image/vector"

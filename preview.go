@@ -3,13 +3,11 @@ package canvas
 import (
 	"bytes"
 	"fmt"
+	"github.com/LaminoidStudio/Canvas/text"
 	"image/color"
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	"runtime"
-
-	"github.com/tdewolff/canvas/text"
 )
 
 func DrawPreview(ctx *Context) error {
@@ -17,7 +15,7 @@ func DrawPreview(ctx *Context) error {
 	if root == "" {
 		root = filepath.Join(os.Getenv("HOME"), "go")
 	}
-	root = filepath.Join(root, "src/github.com/tdewolff/canvas")
+	root = filepath.Join(root, "src/github.com/LaminoidStudio/Canvas")
 
 	latin, err := ioutil.ReadFile(FindLocalFont("DejaVuSerif", FontRegular))
 	if err != nil {
@@ -126,17 +124,6 @@ func DrawPreviewWithAssets(ctx *Context, latin, arabic, devanagari, lenna []byte
 	face = fontLatin.Face(80.0, Black, FontRegular, FontNormal)
 	p, _, _ := face.ToPath("Stroke")
 	ctx.DrawPath(100, 5, p.Stroke(0.75, RoundCap, RoundJoin))
-
-	// Draw a LaTeX formula
-	if runtime.GOOS != "js" {
-		latex, err := ParseLaTeX(`$y_i = \frac{\sin(x)}{2} e^{\frac{a*b}{c}}$`)
-		if err != nil {
-			return err
-		}
-		latex = latex.Transform(Identity.Rotate(-30).Scale(2.0, 2.0))
-		ctx.SetFillColor(Black)
-		ctx.DrawPath(150, 90, latex)
-	}
 
 	// Draw an elliptic arc being dashed
 	ellipse, err := ParseSVG(fmt.Sprintf("A10 30 30 1 0 30 0z"))

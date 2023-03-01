@@ -5,7 +5,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/tdewolff/canvas"
+	"github.com/LaminoidStudio/Canvas"
 	"github.com/tdewolff/minify/v2"
 )
 
